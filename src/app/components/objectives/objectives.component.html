@@ -1,0 +1,14 @@
+<section class="objectives section" id="objectives">
+  <div class="container">
+    <h2 class="section-title">{{ languageService.getTranslation('objectives.title') }}</h2>
+    <p class="section-subtitle">{{ languageService.getTranslation('objectives.description') }}</p>
+    
+    <div class="objectives-grid">
+      <div class="objective-card" *ngFor="let objective of languageService.getTranslations().objectives.items; let i = index">
+        <div class="objective-number">{{ i + 1 }}</div>
+        <h3>{{ objective.title }}</h3>
+        <p>{{ objective.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>

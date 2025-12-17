@@ -1,0 +1,79 @@
+<section class="contact section" id="contact">
+  <div class="container">
+    <h2 class="section-title">{{ languageService.getTranslation('contact.title') }}</h2>
+    <p class="section-subtitle">{{ languageService.getTranslation('contact.subtitle') }}</p>
+    
+    <div class="contact-wrapper">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+        <div class="form-group">
+          <label for="name">{{ languageService.getTranslation('contact.form.name') }}</label>
+          <input
+            type="text"
+            id="name"
+            formControlName="name"
+            [class.error]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
+            placeholder="{{ languageService.getTranslation('contact.form.name') }}"
+          />
+          <span class="error-message" *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+            {{ getErrorMessage('name') }}
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">{{ languageService.getTranslation('contact.form.email') }}</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            [class.error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+            placeholder="{{ languageService.getTranslation('contact.form.email') }}"
+          />
+          <span class="error-message" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+            {{ getErrorMessage('email') }}
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="position">{{ languageService.getTranslation('contact.form.position') }}</label>
+          <select
+            id="position"
+            formControlName="position"
+            [class.error]="contactForm.get('position')?.invalid && contactForm.get('position')?.touched"
+          >
+            <option value="">{{ languageService.getTranslation('contact.form.position') }}</option>
+            <option value="student">{{ languageService.getTranslation('contact.form.positionStudent') }}</option>
+            <option value="tutor">{{ languageService.getTranslation('contact.form.positionTutor') }}</option>
+          </select>
+          <span class="error-message" *ngIf="contactForm.get('position')?.invalid && contactForm.get('position')?.touched">
+            {{ getErrorMessage('position') }}
+          </span>
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary submit-btn"
+          [disabled]="isSubmitting"
+        >
+          <span *ngIf="!isSubmitting">{{ languageService.getTranslation('contact.form.submit') }}</span>
+          <span *ngIf="isSubmitting">{{ languageService.getTranslation('contact.form.submitting') }}</span>
+        </button>
+
+        <div class="form-message success" *ngIf="submitSuccess">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+          </svg>
+          {{ languageService.getTranslation('contact.form.success') }}
+        </div>
+
+        <div class="form-message error" *ngIf="submitError">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="currentColor"/>
+          </svg>
+          {{ languageService.getTranslation('contact.form.error') }}
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+

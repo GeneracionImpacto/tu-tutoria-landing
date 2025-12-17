@@ -1,0 +1,68 @@
+.objectives {
+  background: linear-gradient(135deg, var(--light-blue) 0%, rgba(219, 234, 254, 0.3) 100%);
+
+  .objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .objective-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 16px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-blue);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(30, 64, 175, 0.2);
+    }
+
+    .objective-number {
+      position: absolute;
+      top: -15px;
+      left: 2rem;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+    }
+
+    h3 {
+      font-size: 1.375rem;
+      color: var(--primary-blue);
+      margin: 1rem 0 0.75rem;
+      font-weight: 600;
+    }
+
+    p {
+      color: var(--text-gray);
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .objectives-grid {
+      grid-template-columns: 1fr;
+      max-width: 100%;
+    }
+  }
+}
+
+

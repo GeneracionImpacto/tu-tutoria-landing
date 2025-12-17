@@ -1,0 +1,114 @@
+.benefits {
+  background-color: var(--white);
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .benefit-card {
+    background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(30, 64, 175, 0.2);
+      border-color: var(--secondary-blue);
+    }
+
+    .benefit-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--light-blue);
+
+      .benefit-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+
+        &.tutor-icon {
+          background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+          color: var(--white);
+        }
+
+        &.student-icon {
+          background: linear-gradient(135deg, var(--secondary-blue), #60a5fa);
+          color: var(--white);
+        }
+
+        &.community-icon {
+          background: linear-gradient(135deg, #2563eb, var(--primary-blue));
+          color: var(--white);
+        }
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        color: var(--primary-blue);
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+
+    .benefit-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        color: var(--text-gray);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+          color: var(--primary-blue);
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+
+        span {
+          line-height: 1.6;
+          font-size: 1.05rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .benefit-card {
+      padding: 2rem;
+    }
+  }
+}
+
+

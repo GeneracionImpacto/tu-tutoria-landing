@@ -1,0 +1,33 @@
+<section class="hero" id="hero">
+  <div class="hero-background">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <!-- Logo de TuTutoria 
+      <div class="hero-logo">
+        <img src="assets/logo.jpg" alt="TuTutoria Logo" />
+      </div>  -->
+      
+      <h1 class="hero-title">
+        <span class="brand-highlight">TuTutoría</span>
+        {{ languageService.getTranslation('hero.title') }}
+      </h1>
+      <p class="hero-subtitle">{{ languageService.getTranslation('hero.subtitle') }}</p>
+      <p class="hero-description">{{ languageService.getTranslation('hero.description') }}</p>
+      <button class="btn btn-primary hero-cta" (click)="scrollToContact()">
+        {{ languageService.getTranslation('hero.cta') }}
+      </button>
+      
+      <!-- Imagen ilustrativa -->
+      <div class="hero-image">
+        <img src="assets/imagen1.jpg" alt="TuTutoria Platform" />
+      </div>
+    </div>
+  </div>
+  <div class="hero-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+</section>

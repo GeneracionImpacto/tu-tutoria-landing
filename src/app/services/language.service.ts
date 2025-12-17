@@ -18,7 +18,9 @@ export class LanguageService {
         solution: 'Solución',
         benefits: 'Beneficios',
         objectives: 'Objetivos',
-        contact: 'Contacto'
+        contact: 'Contacto',
+        signin: 'Iniciar Sesión',
+        signup: 'Registrarse'
       },
       hero: {
         title: 'Generación Impacto',
@@ -138,7 +140,9 @@ export class LanguageService {
         solution: 'Solution',
         benefits: 'Benefits',
         objectives: 'Objectives',
-        contact: 'Contact'
+        contact: 'Contact',
+        signin: 'Sign In',
+        signup: 'Sign Up'
       },
       hero: {
         title: 'Generación Impacto',
@@ -286,4 +290,3 @@ export class LanguageService {
     return this.translations[this.currentLanguageSubject.value];
   }
 }
-

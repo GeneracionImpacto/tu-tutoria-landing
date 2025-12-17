@@ -16,9 +16,25 @@
         <li><a (click)="scrollToSection('benefits')">{{ languageService.getTranslation('nav.benefits') }}</a></li>
         <li><a (click)="scrollToSection('objectives')">{{ languageService.getTranslation('nav.objectives') }}</a></li>
         <li><a (click)="scrollToSection('contact')">{{ languageService.getTranslation('nav.contact') }}</a></li>
+        
+        <!-- Botones de autenticación en menú móvil -->
+        <div class="mobile-auth-buttons">
+          <button class="btn-signin" (click)="onSignIn()">
+            {{ languageService.getTranslation('nav.signin') }}
+          </button>
+          <button class="btn-signup" (click)="onSignUp()">
+            {{ languageService.getTranslation('nav.signup') }}
+          </button>
+        </div>
       </ul>
 
       <div class="navbar-actions">
+        <button class="btn-signin" (click)="onSignIn()">
+          {{ languageService.getTranslation('nav.signin') }}
+        </button>
+        <button class="btn-signup" (click)="onSignUp()">
+          {{ languageService.getTranslation('nav.signup') }}
+        </button>
         <button class="lang-toggle" (click)="toggleLanguage()">
           {{ currentLanguage === 'es' ? 'EN' : 'ES' }}
         </button>

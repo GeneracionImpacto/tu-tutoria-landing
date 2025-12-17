@@ -13,6 +13,7 @@ import { ObjectivesComponent } from './components/objectives/objectives.componen
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LanguageService } from './services/language.service';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { LanguageService } from './services/language.service';
     SolutionComponent,
     BenefitsComponent,
     ObjectivesComponent,
+    TestimonialsComponent,
     ContactFormComponent,
     FooterComponent
   ],

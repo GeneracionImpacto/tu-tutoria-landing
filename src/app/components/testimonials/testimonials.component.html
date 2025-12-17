@@ -1,0 +1,62 @@
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <header class="section-header">
+      <span class="eyebrow">
+        {{ languageService.getTranslation('testimonials.eyebrow') }}
+      </span>
+      <h2 class="title">
+        {{ languageService.getTranslation('testimonials.title') }}
+      </h2>
+      <p class="subtitle">
+        {{ languageService.getTranslation('testimonials.subtitle') }}
+      </p>
+    </header>
+
+    <!-- Tabs -->
+    <div class="tabs" role="tablist" aria-label="Testimonials tabs">
+      <button
+        class="tab"
+        [class.active]="activeTab === 'students'"
+        (click)="setTab('students')"
+        role="tab"
+        [attr.aria-selected]="activeTab === 'students'"
+      >
+        {{ languageService.getTranslation('testimonials.tabs.students') }}
+      </button>
+
+      <button
+        class="tab"
+        [class.active]="activeTab === 'tutors'"
+        (click)="setTab('tutors')"
+        role="tab"
+        [attr.aria-selected]="activeTab === 'tutors'"
+      >
+        {{ languageService.getTranslation('testimonials.tabs.tutors') }}
+      </button>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid">
+      <article class="card" *ngFor="let t of activeList">
+        <div class="card-top">
+          <div class="avatar" aria-hidden="true">
+            {{ getInitials(t.name) }}
+          </div>
+
+          <div class="meta">
+            <div class="name">{{ t.name }}</div>
+            <div class="role">{{ t.roleLine }}</div>
+          </div>
+
+          <div class="rating" aria-label="Rating">
+            <span class="star" *ngFor="let s of getStars(t.rating)" [class.filled]="s === 1">
+              ★
+            </span>
+          </div>
+        </div>
+
+        <p class="comment">“{{ t.comment }}”</p>
+      </article>
+    </div>
+  </div>
+</section>

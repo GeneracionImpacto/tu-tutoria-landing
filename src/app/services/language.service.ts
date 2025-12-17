@@ -18,6 +18,7 @@ export class LanguageService {
         solution: 'Solución',
         benefits: 'Beneficios',
         objectives: 'Objetivos',
+        testimonials: 'Testimonios',
         contact: 'Contacto',
         signin: 'Iniciar Sesión',
         signup: 'Registrarse'
@@ -25,36 +26,44 @@ export class LanguageService {
       hero: {
         title: 'Generación Impacto',
         subtitle: 'Conectando estudiantes para crear oportunidades',
-        description: 'Una plataforma que une a estudiantes con altas calificaciones pero dificultades económicas, con estudiantes que necesitan apoyo académico en cursos desafiantes.',
+        description:
+          'Una plataforma que une a estudiantes con altas calificaciones pero dificultades económicas, con estudiantes que necesitan apoyo académico en cursos desafiantes.',
         cta: 'Únete Ahora'
       },
       problem: {
         title: 'El Problema',
-        description: 'Muchos estudiantes enfrentan dos desafíos críticos que pueden llevar al abandono de sus estudios:',
+        description:
+          'Muchos estudiantes enfrentan dos desafíos críticos que pueden llevar al abandono de sus estudios:',
         point1: {
           title: 'Dificultades Económicas',
-          text: 'Estudiantes con excelente rendimiento académico pero recursos económicos limitados que dificultan continuar sus estudios.'
+          text:
+            'Estudiantes con excelente rendimiento académico pero recursos económicos limitados que dificultan continuar sus estudios.'
         },
         point2: {
           title: 'Dificultades Académicas',
-          text: 'Estudiantes que luchan con cursos desafiantes como Cálculo, Física, Química y Programación, perdiendo confianza y motivación.'
+          text:
+            'Estudiantes que luchan con cursos desafiantes como Cálculo, Física, Química y Programación, perdiendo confianza y motivación.'
         },
         conclusion: 'Estos factores contribuyen significativamente a la deserción estudiantil.'
       },
       solution: {
         title: 'Nuestra Solución',
-        description: 'Generación Impacto conecta a estos dos grupos de estudiantes para crear un ecosistema de apoyo mutuo:',
+        description:
+          'Generación Impacto conecta a estos dos grupos de estudiantes para crear un ecosistema de apoyo mutuo:',
         point1: {
           title: 'Tutorías Personalizadas',
-          text: 'Estudiantes con altas calificaciones ofrecen tutorías personalizadas a cambio de un pago justo, generando ingresos mientras ayudan a otros.'
+          text:
+            'Estudiantes con altas calificaciones ofrecen tutorías personalizadas a cambio de un pago justo, generando ingresos mientras ayudan a otros.'
         },
         point2: {
           title: 'Apoyo Accesible',
-          text: 'Estudiantes que necesitan ayuda académica pueden acceder a tutorías de calidad a precios accesibles, mejorando su rendimiento y confianza.'
+          text:
+            'Estudiantes que necesitan ayuda académica pueden acceder a tutorías de calidad a precios accesibles, mejorando su rendimiento y confianza.'
         },
         point3: {
           title: 'Comunidad Colaborativa',
-          text: 'Creamos una red de apoyo estudiantil que fortalece habilidades, mejora el desempeño académico y reduce la deserción.'
+          text:
+            'Creamos una red de apoyo estudiantil que fortalece habilidades, mejora el desempeño académico y reduce la deserción.'
         }
       },
       benefits: {
@@ -94,22 +103,79 @@ export class LanguageService {
         items: [
           {
             title: 'Reducir la Deserción',
-            text: 'Disminuir significativamente las tasas de abandono estudiantil por dificultades académicas o económicas.'
+            text:
+              'Disminuir significativamente las tasas de abandono estudiantil por dificultades académicas o económicas.'
           },
           {
             title: 'Crear Oportunidades',
-            text: 'Proporcionar una fuente de ingresos para estudiantes talentosos mientras apoyan a sus compañeros.'
+            text:
+              'Proporcionar una fuente de ingresos para estudiantes talentosos mientras apoyan a sus compañeros.'
           },
           {
             title: 'Mejorar el Rendimiento',
-            text: 'Ayudar a estudiantes a superar cursos desafiantes y mejorar su confianza académica.'
+            text:
+              'Ayudar a estudiantes a superar cursos desafiantes y mejorar su confianza académica.'
           },
           {
             title: 'Construir Comunidad',
-            text: 'Fomentar un ambiente colaborativo donde los estudiantes se apoyan mutuamente.'
+            text:
+              'Fomentar un ambiente colaborativo donde los estudiantes se apoyan mutuamente.'
           }
         ]
       },
+
+      // ✅ NUEVO: TESTIMONIOS (Estudiantes + Tutores)
+      testimonials: {
+        eyebrow: 'Testimonios',
+        title: 'Opiniones de estudiantes y tutores',
+        subtitle:
+          'Conoce cómo Generación Impacto ayuda a mejorar el rendimiento y también crea oportunidades económicas.',
+        tabs: {
+          students: 'Estudiantes',
+          tutors: 'Tutores'
+        },
+        students: {
+          t1: {
+            name: 'Valeria R.',
+            career: 'Ing. de Sistemas • UPC',
+            comment:
+              'Me ayudaron con Programación y pude entender lo que en clase no me quedaba claro. Súper recomendado.'
+          },
+          t2: {
+            name: 'Diego M.',
+            career: 'Ing. Industrial • UPC',
+            comment:
+              'Tomé una tutoría antes del parcial y subí mi nota. El tutor fue paciente y directo al punto.'
+          },
+          t3: {
+            name: 'Andrea C.',
+            career: 'Ing. Civil • UPC',
+            comment:
+              'La coordinación fue rápida y el costo es accesible. Me sirvió muchísimo en Cálculo.'
+          }
+        },
+        tutors: {
+          t1: {
+            name: 'María P.',
+            role: 'Tutora • Cálculo I',
+            comment:
+              'Me encanta porque puedo organizar mis horarios y ganar un extra. Además siento que realmente ayudo.'
+          },
+          t2: {
+            name: 'José A.',
+            role: 'Tutor • Programación',
+            comment:
+              'Enseñar me ayuda a reforzar mis bases. La plataforma facilita la coordinación y el pago.'
+          },
+          t3: {
+            name: 'Camila S.',
+            role: 'Tutora • Física',
+            comment:
+              'Los estudiantes llegan con dudas concretas y la sesión se aprovecha. Es una experiencia bien ordenada.'
+          }
+        }
+      },
+
       contact: {
         title: '¿Interesado?',
         subtitle: 'Únete a nuestra comunidad y sé parte del cambio',
@@ -133,6 +199,7 @@ export class LanguageService {
         rights: 'Todos los derechos reservados'
       }
     },
+
     en: {
       nav: {
         home: 'Home',
@@ -140,6 +207,7 @@ export class LanguageService {
         solution: 'Solution',
         benefits: 'Benefits',
         objectives: 'Objectives',
+        testimonials: 'Testimonials',
         contact: 'Contact',
         signin: 'Sign In',
         signup: 'Sign Up'
@@ -147,7 +215,8 @@ export class LanguageService {
       hero: {
         title: 'Generación Impacto',
         subtitle: 'Connecting students to create opportunities',
-        description: 'A platform that connects students with high grades but economic difficulties, with students who need academic support in challenging courses.',
+        description:
+          'A platform that connects students with high grades but economic difficulties, with students who need academic support in challenging courses.',
         cta: 'Join Now'
       },
       problem: {
@@ -155,28 +224,34 @@ export class LanguageService {
         description: 'Many students face two critical challenges that can lead to dropping out:',
         point1: {
           title: 'Economic Difficulties',
-          text: 'Students with excellent academic performance but limited economic resources that make it difficult to continue their studies.'
+          text:
+            'Students with excellent academic performance but limited economic resources that make it difficult to continue their studies.'
         },
         point2: {
           title: 'Academic Difficulties',
-          text: 'Students struggling with challenging courses like Calculus, Physics, Chemistry, and Programming, losing confidence and motivation.'
+          text:
+            'Students struggling with challenging courses like Calculus, Physics, Chemistry, and Programming, losing confidence and motivation.'
         },
         conclusion: 'These factors significantly contribute to student dropout.'
       },
       solution: {
         title: 'Our Solution',
-        description: 'Generación Impacto connects these two groups of students to create a mutual support ecosystem:',
+        description:
+          'Generación Impacto connects these two groups of students to create a mutual support ecosystem:',
         point1: {
           title: 'Personalized Tutoring',
-          text: 'Students with high grades offer personalized tutoring in exchange for fair payment, generating income while helping others.'
+          text:
+            'Students with high grades offer personalized tutoring in exchange for fair payment, generating income while helping others.'
         },
         point2: {
           title: 'Accessible Support',
-          text: 'Students who need academic help can access quality tutoring at affordable prices, improving their performance and confidence.'
+          text:
+            'Students who need academic help can access quality tutoring at affordable prices, improving their performance and confidence.'
         },
         point3: {
           title: 'Collaborative Community',
-          text: 'We create a student support network that strengthens skills, improves academic performance, and reduces dropout rates.'
+          text:
+            'We create a student support network that strengthens skills, improves academic performance, and reduces dropout rates.'
         }
       },
       benefits: {
@@ -216,22 +291,79 @@ export class LanguageService {
         items: [
           {
             title: 'Reduce Dropout',
-            text: 'Significantly decrease student dropout rates due to academic or economic difficulties.'
+            text:
+              'Significantly decrease student dropout rates due to academic or economic difficulties.'
           },
           {
             title: 'Create Opportunities',
-            text: 'Provide an income source for talented students while supporting their peers.'
+            text:
+              'Provide an income source for talented students while supporting their peers.'
           },
           {
             title: 'Improve Performance',
-            text: 'Help students overcome challenging courses and improve their academic confidence.'
+            text:
+              'Help students overcome challenging courses and improve their academic confidence.'
           },
           {
             title: 'Build Community',
-            text: 'Foster a collaborative environment where students support each other.'
+            text:
+              'Foster a collaborative environment where students support each other.'
           }
         ]
       },
+
+      // ✅ NEW: TESTIMONIALS (Students + Tutors)
+      testimonials: {
+        eyebrow: 'Testimonials',
+        title: 'Feedback from students and tutors',
+        subtitle:
+          'See how Generación Impacto improves performance and creates income opportunities.',
+        tabs: {
+          students: 'Students',
+          tutors: 'Tutors'
+        },
+        students: {
+          t1: {
+            name: 'Valeria R.',
+            career: 'Systems Engineering • UPC',
+            comment:
+              'They helped me with Programming and I finally understood what I couldn’t in class. Highly recommended.'
+          },
+          t2: {
+            name: 'Diego M.',
+            career: 'Industrial Engineering • UPC',
+            comment:
+              'I took a session before my exam and improved my grade. The tutor was patient and straight to the point.'
+          },
+          t3: {
+            name: 'Andrea C.',
+            career: 'Civil Engineering • UPC',
+            comment:
+              'Scheduling was fast and the price is affordable. It helped me a lot with Calculus.'
+          }
+        },
+        tutors: {
+          t1: {
+            name: 'María P.',
+            role: 'Tutor • Calculus I',
+            comment:
+              'I love it because I can manage my schedule and earn extra money. And I truly help others.'
+          },
+          t2: {
+            name: 'José A.',
+            role: 'Tutor • Programming',
+            comment:
+              'Teaching helps me reinforce my foundations. The platform makes scheduling and payments easy.'
+          },
+          t3: {
+            name: 'Camila S.',
+            role: 'Tutor • Physics',
+            comment:
+              'Students come with specific questions and the session is productive. Everything feels organized.'
+          }
+        }
+      },
+
       contact: {
         title: 'Interested?',
         subtitle: 'Join our community and be part of the change',
@@ -277,12 +409,12 @@ export class LanguageService {
   getTranslation(key: string): string {
     const keys = key.split('.');
     let value = this.translations[this.currentLanguageSubject.value];
-    
+
     for (const k of keys) {
       value = value?.[k];
       if (value === undefined) return key;
     }
-    
+
     return value || key;
   }
 

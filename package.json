@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:gh": "ng build --configuration production --base-href /tu-tutoria-landing/",
+    "deploy:gh": "npx angular-cli-ghpages --dir=dist/generacion-impacto-landing --branch=gh-pages",
+    "redeploy": "npm run build:gh && npm run deploy:gh"
   },
   "private": true,
   "dependencies": {

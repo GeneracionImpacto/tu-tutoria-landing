@@ -2,13 +2,13 @@
   <div class="container">
     <div class="navbar-content">
       <div class="navbar-brand" (click)="scrollToSection('hero')">
-        <img src="assets/logo.jpeg" alt="TuTutoria Logo" class="navbar-logo">
+        <img src="assets/logo.jpeg" alt="TuTutoria Logo" class="navbar-logo" />
         <div class="brand-text">
           <span class="product-name">TuTutoría</span>
           <span class="company-name">by Generación Impacto</span>
         </div>
       </div>
-      
+
       <ul class="nav-links" [class.active]="isMobileMenuOpen">
         <li><a (click)="scrollToSection('hero')">{{ languageService.getTranslation('nav.home') }}</a></li>
         <li><a (click)="scrollToSection('problem')">{{ languageService.getTranslation('nav.problem') }}</a></li>
@@ -17,32 +17,34 @@
         <li><a (click)="scrollToSection('objectives')">{{ languageService.getTranslation('nav.objectives') }}</a></li>
         <li><a (click)="scrollToSection('testimonials')">{{ languageService.getTranslation('nav.testimonials') }}</a></li>
         <li><a (click)="scrollToSection('contact')">{{ languageService.getTranslation('nav.contact') }}</a></li>
-        
-        <!-- Botones de autenticación en menú móvil -->
-        <div class="mobile-auth-buttons">
-          <button class="btn-signin" (click)="onSignIn()">
-            {{ languageService.getTranslation('nav.signin') }}
-          </button>
-          <button class="btn-signup" (click)="onSignUp()">
-            {{ languageService.getTranslation('nav.signup') }}
-          </button>
-        </div>
+
+        <!-- auth solo móvil -->
+        <li class="mobile-only">
+          <div class="mobile-auth-buttons">
+            <button class="btn-signin" (click)="onSignIn()">
+              {{ languageService.getTranslation('nav.signin') }}
+            </button>
+            <button class="btn-signup" (click)="onSignUp()">
+              {{ languageService.getTranslation('nav.signup') }}
+            </button>
+          </div>
+        </li>
       </ul>
 
       <div class="navbar-actions">
-        <button class="btn-signin" (click)="onSignIn()">
+        <button class="btn-signin desktop-only" (click)="onSignIn()">
           {{ languageService.getTranslation('nav.signin') }}
         </button>
-        <button class="btn-signup" (click)="onSignUp()">
+        <button class="btn-signup desktop-only" (click)="onSignUp()">
           {{ languageService.getTranslation('nav.signup') }}
         </button>
+
         <button class="lang-toggle" (click)="toggleLanguage()">
           {{ currentLanguage === 'es' ? 'EN' : 'ES' }}
         </button>
+
         <button class="mobile-menu-toggle" (click)="toggleMobileMenu()" [attr.aria-label]="'Toggle menu'">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>

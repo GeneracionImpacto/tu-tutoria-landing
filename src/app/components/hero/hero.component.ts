@@ -12,7 +12,7 @@ export class HeroComponent {
 
   onJoinNow(): void {
     // Redirigir a la plataforma de registro
-    window.open('https://tu-plataforma.com/signup', '_blank');
+    window.open('https://tu-tutoria-19287.web.app/register', '_blank');
   }
 
   scrollToContact(): void {

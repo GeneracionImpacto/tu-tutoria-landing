@@ -48,11 +48,11 @@ export class NavbarComponent {
 
   onSignIn(): void {
     // Redirigir a la plataforma de Sign In
-    window.open('https://tu-plataforma.com/signin', '_blank');
+    window.open('https://tu-tutoria-19287.web.app/login', '_blank');
   }
 
   onSignUp(): void {
     // Redirigir a la plataforma de Sign Up
-    window.open('https://tu-plataforma.com/signup', '_blank');
+    window.open('https://tu-tutoria-19287.web.app/register', '_blank');
   }
 }
